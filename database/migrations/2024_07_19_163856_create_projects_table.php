@@ -24,7 +24,7 @@ return new class extends Migration
 -cliente
 -priorità
 -creato il 
--aggironato il
+-aggiornato il
  */
             $table->string('name', 50)->unique();
             $table->string('slug', 70)->nullable();

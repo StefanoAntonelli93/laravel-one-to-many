@@ -45,7 +45,9 @@ class ProjectController extends Controller
         // dd($data);
 
         // cover_image
-        $img_path = Storage::put('uploads', $data['cover_image']);
+        // $img_path = Storage::put('uploads', $data['cover_image']);
+        // operatore ternario
+        $img_path = $request->hasFile('cover_image') ? Storage::put('uploads', $data['cover_image']) : NULL;
 
 
         $project = new Project();
