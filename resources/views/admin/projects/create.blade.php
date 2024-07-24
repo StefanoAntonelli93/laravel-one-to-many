@@ -21,6 +21,12 @@
                 <label for="description" class="form-label">Descrizione</label>
                 <textarea rows="4" type="text" class="form-control" id="description" name="description"></textarea>
             </div>
+            {{-- file input --}}
+            <div class="mb-3">
+                <label for="cover_image" class="form-label">Cover image</label>
+                <input class="form-control" type="file" id="cover_image" name="cover_image">
+            </div>
+
 
             {{-- form check --}}
             <div class="py-3 d-flex gap-3">
