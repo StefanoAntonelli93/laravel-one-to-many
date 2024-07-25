@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('types', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('slug', 30)->nullable();
+            $table->string('slug', 120)->nullable();
             $table->text('description')->nullable();
             $table->string('status', 30)->nullable();
             $table->timestamps();

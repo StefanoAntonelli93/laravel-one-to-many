@@ -13,7 +13,7 @@ I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che a
 -   permettere all’utente di associare una tipologia nella pagina di creazione e modifica di un progetto[]
 -   gestire il salvataggio dell’associazione progetto-tipologia con opportune regole di validazione[]
     ## Bonus 1:
-    creare il seeder per il model Type.[]
+    creare il seeder per il model Type.[x]
     ## Bonus 2:
     aggiungere le operazioni CRUD per il model Type, in modo da gestire le tipologie di progetto direttamente dal pannello di amministrazione.[]
 
