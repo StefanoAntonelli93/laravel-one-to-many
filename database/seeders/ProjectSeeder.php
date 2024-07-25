@@ -7,6 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 // importo faker
 use Faker\Generator as Faker;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 
 
@@ -19,6 +20,8 @@ class ProjectSeeder extends Seeder
     //  parametri della funzione instanza $faker
     public function run(Faker $faker): void
     {
+        // disabilito relazione tra tabelle se voglio usare truncate perchè non posso eliminare dei campi che hanno relazioni
+        Schema::disableForeignKeyConstraints();
         // metodo truncate per non duplicare seed
         Project::truncate();
 
@@ -51,5 +54,8 @@ class ProjectSeeder extends Seeder
             // salvo e lancio istanze nel db
             $project->save();
         }
+
+        //  dopo operazioni riabilito relazione tra tabelle type e project
+        Schema::enableForeignKeyConstraints();
     }
 }
