@@ -14,4 +14,10 @@ class Project extends Model
         'cover_image'
 
     ];
+
+    // un project ha un type
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }
