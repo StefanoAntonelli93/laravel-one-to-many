@@ -9,9 +9,9 @@ I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che a
 -   creare il model Type[x]
 -   creare la migration di modifica per la tabella projects per aggiungere la chiave esterna[x] (aggiungo foreign key con una nuova migrazione in project per relazionare entità type-> php artisan:migration add_type_id_foreign_to_project_table)
 -   aggiungere ai model Type e Project i metodi per definire la relazione one to many[x]
--   visualizzare nella pagina di dettaglio di un progetto la tipologia associata, se presente[]
--   permettere all’utente di associare una tipologia nella pagina di creazione e modifica di un progetto[]
--   gestire il salvataggio dell’associazione progetto-tipologia con opportune regole di validazione[]
+-   visualizzare nella pagina di dettaglio di un progetto la tipologia associata, se presente[x]
+-   permettere all’utente di associare una tipologia nella pagina di creazione e modifica di un progetto[x]
+-   gestire il salvataggio dell’associazione progetto-tipologia con opportune regole di validazione[x]
     ## Bonus 1:
     creare il seeder per il model Type.[x]
     ## Bonus 2:
