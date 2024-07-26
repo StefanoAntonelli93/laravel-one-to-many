@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     use HasFactory;
-    protected $fillable = [
+    protected $guarded = [
         'name',
         'description',
         'cover_image'

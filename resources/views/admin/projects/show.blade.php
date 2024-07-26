@@ -17,6 +17,11 @@
                 </div>
             @endif
             <p>Nome: {{ $project->name }}</p>
+            {{-- invoco type, se diverso da null allora mostra type->name --}}
+            @if ($project->type != null)
+                <p>Categoria: {{ $project->type->name }}</p>
+            @endif
+
             <p>Data inizio progetto: {{ $project->project_start_date }}</p>
             <p>Data fine progetto: {{ $project->project_end_date }}</p>
             <p>Status: {{ ucfirst($project->status) }}</p>

@@ -26,6 +26,17 @@
                 <label for="cover_image" class="form-label">Cover image</label>
                 <input class="form-control" type="file" id="cover_image" name="cover_image">
             </div>
+            {{-- type form select --}}
+            <div class="mb-3">
+                <label for="type-content" class="form-label">Tipo di progetto</label>
+                <select class="form-select" name="type_id">
+                    <option value="">Nome progetto</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+
+                </select>
+            </div>
 
 
             {{-- form check --}}
