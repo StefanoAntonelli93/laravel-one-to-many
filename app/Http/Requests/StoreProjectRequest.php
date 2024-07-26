@@ -26,6 +26,8 @@ class StoreProjectRequest extends FormRequest
             'name' => 'required|string|unique:projects|min:5|max:70',
             'description' => 'string|min:5|max:255',
             'cover_image' => 'nullable|image|max:2048',
+            // validazione campo type_id, deve esistere nella colonna id della tabella type
+            'type_id' => ['nullable', 'exists:type,id']
         ];
     }
     // public function messages()
