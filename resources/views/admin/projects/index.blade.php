@@ -26,6 +26,7 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
+                    <th scope="col">User</th>
                     <th scope="col">Project name</th>
                     <th scope="col">Status</th>
                     <th scope="col" class="text-end">Settings</th>
@@ -35,6 +36,9 @@
                 @foreach ($projects as $project)
                     <tr>
                         <th scope="row">{{ $project->id }}</th>
+                        <td>
+                            <div>{{ $project->user?->name ?: 'Spandam' }}</div>
+                        </td>
                         <td>
                             <div>{{ $project->name }}</div>
                         </td>

@@ -26,6 +26,21 @@
                 <textarea rows="4" type="text" class="form-control" id="description" name="description">{{ old('description', $project->description) }}</textarea>
             </div>
 
+            {{-- type form select --}}
+            <div class="mb-3">
+                <label for="type-content" class="form-label">Tipo di progetto:
+                    {{ old('type_id', $project->type->name) }}</label>
+                <select class="form-select" name="type_id">
+                    <option value="">Nome progetto</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" @if (old('type_id', $project->type->id) == $type->id) selected @endif>
+                            {{ $type->name }}</option>
+                    @endforeach
+                    <option value="85">Tipo progetto non valido</option>
+
+                </select>
+            </div>
+
             {{-- form check --}}
             <div class="py-3 d-flex gap-3">
                 <div class="form-check">

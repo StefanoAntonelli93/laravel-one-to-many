@@ -26,6 +26,8 @@ class UpdateProjectRequest extends FormRequest
             // posso usare anche array per le validazioni
             'name' => ['required', 'string', 'min:5', 'max:70', Rule::unique('projects')->ignore($this->project)],
             'description' => 'string|min:5|max:255',
+            // se id di type esiste nell'entità type alla colonna id allora è valido
+            'type_id' => ['nullable', 'exists:types,id']
         ];
     }
 }
