@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Type;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
@@ -47,6 +48,8 @@ class ProjectController extends Controller
         $data = $request->all();
         // dd($data);
 
+        // visualizzo utente corrente
+        $current_user = Auth::user()->id;
         // cover_image
         // $img_path = Storage::put('uploads', $data['cover_image']);
         // operatore ternario
@@ -58,6 +61,8 @@ class ProjectController extends Controller
         $project->description = $data['description'];
         $project->status = $data['status'];
         $project->cover_image = $img_path;
+        // visualizzo utente corrente
+        $project->user_id = $current_user;
 
         $project->save();
         // reindirizzo a show
